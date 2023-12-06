@@ -1,24 +1,3 @@
-# README
+Försöker bygga en egen twitter-tjänst :)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image](https://github.com/claratoll/ruby-twitter/assets/43537329/7f9c6853-3bf8-4183-9e9a-56a67e49d1e9)
