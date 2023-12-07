@@ -1,0 +1,25 @@
+<h1>All users</h1>
+<p>a list with all users</p>
+
+<table id="users" class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+            <td><%= user.name %></td>
+            <td> <%= user.email %></td>
+            <td><%= link_to "Show", user_path(user) %></td>
+            <% if current_user.follows?(user) %>
+                <td><%= button_to 'Unfollow', unfollow_user_path(user), method: :delete %></td>
+            <% else %>
+                <td><%= button_to 'Follow', follow_user_path(user), method: :post %></td>
+            <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

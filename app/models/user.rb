@@ -12,4 +12,18 @@ class User < ApplicationRecord
 
   has_many :follower_users, foreign_key: :followee_id, class_name: "Following"
   has_many :followers, through: :follower_users, source: :follower
+
+
+  def follows?(other_user)
+    self.followees.include?(other_user)
+  end
+
+  def follow(other_user)
+    self.followees << other_user unless self.follows?(other_user)
+  end
+
+  def unfollow(other_user)
+    self.followees.delete(other_user)
+  end
+
 end
